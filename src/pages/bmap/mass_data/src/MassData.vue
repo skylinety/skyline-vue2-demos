@@ -2,7 +2,7 @@
   <div style="width: 100%; height: 100%">
     <baidu-map
       style="width: 100%; height: 100%"
-      v-model="test"
+      v-model="bmap"
       @ready="handler"
       :scroll-wheel-zoom="true"
       :center="center"
@@ -32,7 +32,7 @@ export default {
     return {
       center: { lng: 105.403119, lat: 38.028658 },
       zoom: 7,
-      test: null,
+      bmap: null,
     }
   },
   props: {
