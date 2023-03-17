@@ -3,7 +3,6 @@ export function getModules(reg) {
   let modules = {}
   files.keys().forEach((key) => {
     let obj = files(key).default || files(key)
-    console.log('index.js第6行:::obj', obj)
     modules = { ...modules, [obj.name]: obj }
   })
   return modules

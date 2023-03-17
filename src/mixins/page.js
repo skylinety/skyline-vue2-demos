@@ -1,11 +1,13 @@
 const files = require.context('../pages', true, /.*src\/[^/]*\.vue$/)
+
 let modules = {}
 files.keys().forEach((key) => {
+  console.log('page.js第5行:::key', key);
   let obj = files(key).default || files(key)
+  console.log('page.js第7行:::[obj.name]', [obj.name]);
   modules = { ...modules, [obj.name]: obj }
 })
 
-console.log('page.js第8行:::modules', modules)
 export default {
   components: {
     ...modules,

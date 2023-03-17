@@ -32,7 +32,7 @@ export default {
     return {
       center: { lng: 116.403765, lat: 39.91485 },
       markerDot: [116.0542, 40.29132],
-      labelDot: [116.0542, 40.09132],
+      labelDot: [116.2032, 40.01112],
       zoom: 9,
       baiduMap: null,
       map: null,
@@ -67,7 +67,6 @@ export default {
       map.openInfoWindow(infoWindow, new BMap.Point(...point))
     },
     newMarker() {
-      console.log('BaseMap.vue第69行:::new marker', );
       let { BMap, map, openInfoWindow, centerAndZoom, markerDot } = this
       let marker = new BMap.Marker(new BMap.Point(...markerDot), {
         icon: new BMap.Icon(
@@ -100,7 +99,6 @@ export default {
       this.BMap = BMap
       let { openInfoWindow, labelDot, newMarker } = this
       // var map = new BMap.Map('allmap')
-      console.log('BaseMap.vue第41行:::ty8s', this.center)
       const { lng, lat } = this.center
       map.centerAndZoom(new BMap.Point(lng, lat), 5)
       map.enableScrollWheelZoom()
@@ -124,7 +122,6 @@ export default {
             }) //建立多边形覆盖物
             ply.addEventListener('mouseover', () => {
               map.closeInfoWindow()
-              console.log('BaseMap.vue第69行:::movevvv')
               // const Info = Vue.extend(InfoWindow)
               // const content = new Info({
               //   propsData: {
@@ -155,7 +152,7 @@ export default {
         // const { lng, lat } = this.center
         var label = new BMap.Label('海淀区', {
           position: new BMap.Point(...labelDot),
-          offset: new BMap.Size(100, 0), // 第一个参数左右，左-右+，第二个参数上下。上+下-
+          // offset: new BMap.Size(100, 0), // 第一个参数左右，左-右+，第二个参数上下。上+下-
         })
         label.setStyle({
           color: 'red',

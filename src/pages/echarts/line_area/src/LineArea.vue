@@ -1,5 +1,5 @@
 <template>
-  <div id="chart" style="width: 100%; height: 100%"></div>
+  <div id="lineArea" style="width: 100%; height: 100%"></div>
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     init() {
-      const dom = document.getElementById('chart')
+      const dom = document.getElementById('lineArea')
       this.chart = echarts.init(dom)
     },
     refresh(option) {
