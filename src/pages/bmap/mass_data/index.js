@@ -1,4 +1,4 @@
-import BmapMassData from './src/BmapMassData.vue'
+import BmapMassData from './src/MassData.vue'
 
 /* istanbul ignore next */
 BmapMassData.install = function (Vue) {

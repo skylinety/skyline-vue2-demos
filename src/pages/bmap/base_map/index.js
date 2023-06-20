@@ -1,4 +1,4 @@
-import BmapBaseMap from './src/BmapBaseMap.vue'
+import BmapBaseMap from './src/BaseMap.vue'
 
 /* istanbul ignore next */
 BmapBaseMap.install = function (Vue) {

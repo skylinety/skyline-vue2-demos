@@ -1,6 +1,7 @@
 <script>
 
 import page from "@/mixins/page";
+
 export default {
   name: 'Bmap',
   data() {

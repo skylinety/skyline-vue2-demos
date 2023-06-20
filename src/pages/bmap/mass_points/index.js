@@ -1,4 +1,4 @@
-import BmapMassPoints from './src/BmapMassPoints.vue'
+import BmapMassPoints from './src/MassPoints.vue'
 
 /* istanbul ignore next */
 BmapMassPoints.install = function (Vue) {
